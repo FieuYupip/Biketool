@@ -1,0 +1,8 @@
+biketoolvenv
+*.pyc
+*~
+__pycache__
+db.sqlite3
+/static
+.DS_Store
+db3.sqlite3
