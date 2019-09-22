@@ -22,10 +22,9 @@ class toolbox(models.Model):
         rent_status = models.CharField(choices=RENT_STATUS, max_length=1)
         #Relationship to other data
         video = models.ManyToManyField('bike_video')
-        building = models.ManyToManyField('apt_building', blank='True')
-        user_rent = models.ManyToManyField('user, blank='True')
-        company_sponsor = models.ManyToManyField('user, blank='bike_company', blank='True')
-
+        building = models.ManyToManyField('apt_building', blank=True)
+        user_rent = models.ManyToManyField('user', blank=True)
+        sponsor = models.ManyToManyField('bike_company', blank=True)
 class apt_building(models.Model):
         address = models.CharField(max_length=50)
         time_update = models.DateTimeField()
