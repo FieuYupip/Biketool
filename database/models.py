@@ -2,10 +2,7 @@ from django.db import models
 
 # Create your models here.
 class tool(models.Model):
-        QUALITY_STATUS = [
-    ('G', 'Good'),
-    ('B', 'Bad'),
-]
+        QUALITY_STATUS = [('G', 'Good'),('B', 'Bad'),]
         name = models.CharField(max_length=50)
         category = models.CharField(max_length=50)
         time_update = models.DateTimeField()
@@ -15,8 +12,8 @@ class tool(models.Model):
         #Relationship to other data
         toolbox = models.ManyToManyField("toolbox")
         video = models.ManyToManyField('bike_video')
-class toolbox(models.Model):
-        RENT_STATUS = [('O', 'ON RENT'), ('R', 'RETURNED')]
+class toolbox(models.Model): 
+        RENT_STATUS = [('O','ON RENT'),('R','RETURNED'),]
         toolbox_ID = models.CharField(max_length=50)
         category = models.CharField(max_length=50)
         time_update = models.DateTimeField()
@@ -35,7 +32,7 @@ class apt_building(models.Model):
         amount_of_user = models.IntegerField(default=0)
 
 class user(models.Model):
-        RENT_STATUS = [('K', 'KEEP'), ('R', 'RETURNED')]
+        RENT_STATUS = [('K','KEEP'),('R','RETURNED'),]
         name = models.CharField(max_length=50)
         address = models.CharField(max_length=50)
         email = models.CharField(max_length=50)
