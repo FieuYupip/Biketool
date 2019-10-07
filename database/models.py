@@ -13,9 +13,8 @@ class tool(models.Model):
         toolbox = models.ManyToManyField("toolbox")
         video = models.ManyToManyField('bike_video')
 class toolbox(models.Model): 
-        RENT_STATUS = [('O','ON RENT'),('R','RETURNED'),]
+        RENT_STATUS = [('K', 'KEEP'), ('R', 'RETURNED')]
         toolbox_ID = models.CharField(max_length=50)
-        category = models.CharField(max_length=50)
         time_update = models.DateTimeField()
         description = models.TextField()
         amount = models.IntegerField()
