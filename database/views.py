@@ -5,4 +5,6 @@ from django.http import HttpResponse
 def index(request):
     name_of_service = "biketool rental service"
     return render(request, "database/home.html", {'name': name_of_service} )
+
+
  
