@@ -6,7 +6,11 @@
 <body>
 
 <h1>Welcome to biketool</h1>
-<p>This is <b>{{ name }}</b> </p>
+{% for apt_building in apt_buildings %}
+<ul>
+    <li>{{ apt_building.address }}</li>
+</ul>
+{% endfor %}
 
 </body>
 </html>
