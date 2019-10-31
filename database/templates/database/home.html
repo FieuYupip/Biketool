@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-<h1>Welcome to biketool</h1>
-{% for apt_building in apt_buildings %}
-<ul>
-    <li>{{ apt_building.address }}</li>
-</ul>
-{% endfor %}
-
-</body>
-</html>
+{% extends 'database/layout.html' %}
+{% block content %}
+<a href="{% url 'dashboard' %}"><h3>Click here to rent bike tool</h3></a>
+{% endblock %}

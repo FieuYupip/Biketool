@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import tool, toolbox, apt_building, user, bike_company, bike_video
+from .models import tool, toolbox, apt_building, bike_company, bike_video
 
 #class StepInline(admin.StackedInline):
     #model = toolbox
@@ -12,6 +12,5 @@ from .models import tool, toolbox, apt_building, user, bike_company, bike_video
 admin.site.register(tool)
 admin.site.register(toolbox)
 admin.site.register(apt_building)
-admin.site.register(user)
 admin.site.register(bike_company)
 admin.site.register(bike_video)

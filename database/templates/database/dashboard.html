@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'database/layout.html' %}
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+{% block content %}
+<h1>Choose your address</h1>
+{% for apt_building in apt_buildings %}
+<ul>
+    <li><a href="{% url 'building_toolbox' apt_building.id %}">{{ apt_building.address }}</a></li>
+</ul>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
